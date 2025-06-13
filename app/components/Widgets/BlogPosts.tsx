@@ -67,7 +67,7 @@ const BlogPosts = ({ postData, catagorys }: any) => {
       <div className="Latest over  relative md:h-80 overflow-hidden rounded-lg   border-main mx-2 lg:flex lg:border-2">
         <div className=" h-fit  rounded-lg  lg:w-fit xl:w-[130%]">
           <Image
-            src={`/${reversedData.postImage.src}`}
+            src={`${reversedData.postImage.src}`}
             alt={reversedData.h1}
             width={10000}
             height={10000}
@@ -135,7 +135,7 @@ const BlogPosts = ({ postData, catagorys }: any) => {
                       >
                         <div className="overflow-hidden rounded-lg lg:w-fit">
                           <Image
-                            src={`/${item.postImage.src}`}
+                            src={`${item.postImage.src}`}
                             alt={item.h1}
                             width={10000}
                             height={10000}

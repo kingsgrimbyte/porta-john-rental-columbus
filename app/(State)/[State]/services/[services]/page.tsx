@@ -114,7 +114,9 @@ const page = ({ params }: { params: { services: string } }) => {
 
     {/* LEFT: Image */}
     <div className="w-full">
-      <img
+      <Image
+        width={1000}
+        height={1000}
         src="https://ik.imagekit.io/h7rza8886p/during-construction-of-a-house-portable-plastic-b-2025-03-27-03-45-26-utc.jpg?updatedAt=1748415477782" // replace with your actual image path
         alt="Construction Portable Toilet"
         className="w-full h-auto rounded-xl shadow-md object-cover"

@@ -104,7 +104,7 @@ const Hero = () => {
                 <div className="mx-6 mt-4 flex h-fit w-auto flex-wrap items-center justify-center gap-4 md:mx-10">
                   {slugs
                     .sort()
-                    .slice(0, 21)
+                    .slice(0, 15)
                     .map((City: any, index: number) => {
                       return (
                         <div className="" key={index}>

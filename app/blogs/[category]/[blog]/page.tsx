@@ -60,7 +60,7 @@ const page = ({ params }: { params: { blog: string } }) => {
               {blogFilteredData[0].postImage && (
                 <div className="mt-6 overflow-hidden  rounded-lg lg:w-fit">
                   <Image
-                    src={`/${blogFilteredData[0].postImage.src}`}
+                    src={`${blogFilteredData[0].postImage.src}`}
                     alt={`${blogFilteredData[0].postImage.alt}`}
                     width={10000}
                     height={10000}
@@ -116,7 +116,8 @@ const page = ({ params }: { params: { blog: string } }) => {
           {/*Content*/}
         </div>
         {/* Recent Post  */}
-        <div className="text-cream relative px-4 py-20 md:px-14">
+        {BlogJson.length > 1 && (
+           <div className="text-cream relative px-4 py-20 md:px-14">
           <h2 className="flex items-center gap-4 text-3xl">
             RECENT BLOGS
             <span className=" hidden  h-0.5 w-20 justify-center bg-main md:flex"></span>
@@ -138,7 +139,7 @@ const page = ({ params }: { params: { blog: string } }) => {
                   >
                     <div className="overflow-hidden rounded-lg lg:w-fit">
                       <Image
-                        src={`/${item.postImage.src}`}
+                        src={`${item.postImage.src}`}
                         alt={`${item.postImage.alt}`}
                         width={10000}
                         height={10000}
@@ -174,6 +175,8 @@ const page = ({ params }: { params: { blog: string } }) => {
           </div>
           {/* Cards */}
         </div>
+        )}
+       
         {/* Recent Post  */}
       </div>
     </div></div>
@@ -183,10 +186,10 @@ const page = ({ params }: { params: { blog: string } }) => {
 export default page;
 
 
-export  function generateStaticParams() {
-  const subDomain = Array.from(new Set(BlogJson.map((item) => item.slug)));
-  // const subDomain = Object.keys(cityData);
-  return subDomain.map((locations: any) => ({
-    blog: locations.toString(),
-  }));
-}
+// export  function generateStaticParams() {
+//   const subDomain = Array.from(new Set(BlogJson.map((item) => item.slug)));
+//   // const subDomain = Object.keys(cityData);
+//   return subDomain.map((locations: any) => ({
+//     blog: locations.toString(),
+//   }));
+// }

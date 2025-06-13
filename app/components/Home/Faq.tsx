@@ -25,7 +25,7 @@ const Faq = ({ value = "" }) => {
   const abbrevation = value?.split("-").pop()?.toUpperCase();
    const StateName = contentData?.name
       ? abbrevation
-        ? `${contentData.name}, ${abbrevation}`
+        ? `${contentData.name}`
         : contentData.name
       : ContactInfo.location.split(",")[0].trim();
   return (
